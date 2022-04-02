@@ -3,7 +3,6 @@ package assignment7;
 import javafx.scene.control.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
-
 import java.util.ArrayList;
 
 public class DanhSach {
@@ -15,6 +14,9 @@ public class DanhSach {
 
     public void nhapsp(){
         try {
+            if(tensp.getText().isEmpty() || gia.getText().isEmpty() || dvi.getText().isEmpty() || slg.getText().isEmpty()){
+                throw new Exception("Please insert all the field");
+            }
             danhsachsp.add(new SanPham(tensp.getText(),dvi.getText(),Double.parseDouble(gia.getText()),Integer.parseInt(slg.getText())));
             tbao.setFill(Paint.valueOf("BLUE"));
             tbao.setText("Thêm thành công");
@@ -23,12 +25,15 @@ public class DanhSach {
             gia.setText("");
             dvi.setText("");
             slg.setText("");
-        }catch (Exception e){
+        }catch (NumberFormatException e){
+            tbao.setVisible(true);
+            tbao.setFill(Paint.valueOf("RED"));
+            tbao.setText("Not a number error");
+        } catch (Exception e) {
             tbao.setVisible(true);
             tbao.setFill(Paint.valueOf("RED"));
             tbao.setText(e.getMessage());
         }
-
     }
 
     public void quaylai(){
