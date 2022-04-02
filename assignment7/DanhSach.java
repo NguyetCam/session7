@@ -15,7 +15,7 @@ public class DanhSach {
     public void nhapsp(){
         try {
             if(tensp.getText().isEmpty() || gia.getText().isEmpty() || dvi.getText().isEmpty() || slg.getText().isEmpty()){
-                throw new Exception("Please insert all the field");
+                throw new Exception("Vui lòng nhập đầy đủ thông tin");
             }
             danhsachsp.add(new SanPham(tensp.getText(),dvi.getText(),Double.parseDouble(gia.getText()),Integer.parseInt(slg.getText())));
             tbao.setFill(Paint.valueOf("BLUE"));
@@ -28,7 +28,7 @@ public class DanhSach {
         }catch (NumberFormatException e){
             tbao.setVisible(true);
             tbao.setFill(Paint.valueOf("RED"));
-            tbao.setText("Not a number error");
+            tbao.setText("Lỗi không phải số");
         } catch (Exception e) {
             tbao.setVisible(true);
             tbao.setFill(Paint.valueOf("RED"));
