@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -17,8 +18,8 @@
       </Text>
       <TextField fx:id="gia" layoutX="175.0" layoutY="239.0" prefHeight="51.0" prefWidth="251.0" promptText="Giá" />
       <TextField fx:id="dvi" layoutX="175.0" layoutY="316.0" prefHeight="51.0" prefWidth="251.0" promptText="Đơn vị" />
-      <TextField fx:id="slg" layoutX="174.0" layoutY="393.0" prefHeight="51.0" prefWidth="251.0" promptText="Số lượng" />
-      <Text fx:id="tbao" fill="BLUE" layoutX="176.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm thành công" textAlignment="CENTER" visible="false" wrappingWidth="251.0" />
+      <TextField fx:id="slg" layoutX="174.0" layoutY="395.0" prefHeight="51.0" prefWidth="251.0" promptText="Số lượng" />
+      <Text fx:id="tbao" fill="BLUE" layoutX="174.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm thành công" textAlignment="CENTER" visible="false" wrappingWidth="251.0" />
       <TextArea fx:id="name" editable="false" layoutX="63.0" layoutY="89.0" prefHeight="365.0" prefWidth="174.0" text="       Tên sản phẩm" visible="false" />
       <TextArea fx:id="price" editable="false" layoutX="232.0" layoutY="89.0" prefHeight="365.0" prefWidth="128.0" text="          Giá" visible="false" />
       <TextArea fx:id="unit" editable="false" layoutX="357.0" layoutY="89.0" prefHeight="365.0" prefWidth="96.0" text="    Đơn vị" visible="false" />
